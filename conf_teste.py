@@ -6,9 +6,12 @@ class test_1:
     driver = webdriver.Chrome()  # chamo o browser numa variável...o Driver é o controlador do Selenium
     driver.get(url_demo)
     time.sleep(3)
+
     driver.find_element(By.CSS_SELECTOR,'[placeholder="Username"]').send_keys('Admin')
     driver.find_element(By.CSS_SELECTOR,'[placeholder="Password"]').send_keys('admin123')
     driver.find_element(By.CLASS_NAME,'class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button"').click()
+    #parei no login...nao consegui rodar
+
 
 
 
