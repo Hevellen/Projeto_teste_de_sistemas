@@ -8,7 +8,7 @@ class test_1:
     time.sleep(3)
     driver.find_element(By.CSS_SELECTOR,'[placeholder="Username"]').send_keys('Admin')
     driver.find_element(By.CSS_SELECTOR,'[placeholder="Password"]').send_keys('admin123')
-    driver.find_element(By.CSS_SELECTOR,'type="submit"').click()
+    driver.find_element(By.CLASS_NAME,'class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button"').click()
 
 
 
