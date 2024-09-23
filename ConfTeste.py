@@ -13,7 +13,6 @@ class test_1:
         assert current_url==url_demo,'URL válida'
         time.sleep(2)
 
-
         driver.quit()
         #consegui fazer o LOGIN
 
