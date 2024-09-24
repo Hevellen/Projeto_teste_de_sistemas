@@ -3,15 +3,15 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
 url_demo = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
-class Test1:
-        @pytest.fixture
-        def open_browser(self):
+
+@pytest.fixture
+def open_browser(self):
                 driver=webdriver.Chrome()
                 driver.get(url_demo)
                 yield driver
                 time.sleep(2)
                 driver.quit()
-        def test_login_button(open_browser):
+def test_login_button(open_browser):
                 driver=open_browser
                 driver.find_element(By.CSS_SELECTOR, '[placeholder="Username"]').send_keys('Admin')
                 driver.find_element(By.CSS_SELECTOR, '[placeholder="Password"]').send_keys('admin123')
