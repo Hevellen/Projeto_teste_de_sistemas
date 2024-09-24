@@ -5,12 +5,13 @@ from selenium.webdriver.common.by import By
 url_demo = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
 
 @pytest.fixture
-def open_browser(self):
+def open_browser():
                 driver=webdriver.Chrome()
                 driver.get(url_demo)
                 yield driver
                 time.sleep(2)
                 driver.quit()
+@pytest.fixture()
 def test_login_button(open_browser):
                 driver=open_browser
                 driver.find_element(By.CSS_SELECTOR, '[placeholder="Username"]').send_keys('Admin')
