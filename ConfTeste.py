@@ -11,7 +11,7 @@ def test_open_browser():
                 yield driver
                 time.sleep(2)
                 driver.quit()
-@pytest.fixture()
+@pytest.fixture
 def test_login_button(test_open_browser):
                 driver=test_open_browser
                 driver.find_element(By.CSS_SELECTOR, '[placeholder="Username"]').send_keys('Admin')
