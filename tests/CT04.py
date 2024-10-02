@@ -7,7 +7,7 @@ class Test4:
         loginp=test_open_browser()
         loginp.test_login_button()
         menu_pim=menupim()
-        menu_pim.is_url_menupim(),"URL inválida!"
+        menu_pim.test_is_url_menupim(),"URL inválida!"
 
 
 
