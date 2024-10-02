@@ -1,6 +1,6 @@
 import pytest
 
-from pages.loginPage import LoginPage, test_LoginPage
+from pages.loginPage import test_LoginPage
 
 
 @pytest.fixture
