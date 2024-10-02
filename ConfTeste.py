@@ -9,7 +9,6 @@ def test_open_browser():
    loginp=LoginPage()
    loginp.open_login_page()
     yield loginp
-    loginp.sleep()
     loginp.close()
 
 @pytest.fixture
