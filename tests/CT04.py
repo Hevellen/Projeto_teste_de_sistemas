@@ -1,4 +1,4 @@
-
+from pages.menuPIM import menupim
 
 url_demo = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
 
@@ -6,10 +6,10 @@ class Test4:
     def test_create_user(self, test_open_browser):
         loginp=test_open_browser()
         loginp.test_login_button()
+        menu_pim=menupim()
+        menu_pim.is_url_menupim(),"URL inválida!"
 
-        driver.findelement((By.CLASS_NAME,'class="oxd-icon bi-list oxd-topbar-header-hamburger"')).click()
 
-        driver.findelement(By.CLASS_NAME,'oxd-text oxd-text--span oxd-main-menu-item--name')).click()
-        driver.findelement(By.CSS_SELECTOR,'[type="button"]').click()
+
 
 
