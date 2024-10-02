@@ -1,16 +1,17 @@
 import pytest
-from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
-url_demo = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
+
+from pages.loginPage import LoginPage
 
 @pytest.fixture
 def test_open_browser():
-    driver = webdriver.Chrome()
-    driver.get(url_demo)
-    yield driver
-    time.sleep(2)
-    driver.quit()
+   loginp=LoginPage()
+   loginp.open_login_page()
+    yield loginp
+    loginp.sleep()
+    loginp.close()
+
 @pytest.fixture
 def test_login_button(test_open_browser):
     driver = test_open_browser
