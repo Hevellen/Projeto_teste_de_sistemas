@@ -15,6 +15,3 @@ class test_menupim:
         self.driver.findelement((By.CLASS_NAME,'oxd-text oxd-text--span oxd-main-menu-item--name')).click()
         self.driver.findelement(By.CSS_SELECTOR, '[type="button"]').click()
 
-
-def menupim():
-    return None
