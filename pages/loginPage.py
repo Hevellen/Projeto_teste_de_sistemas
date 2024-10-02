@@ -7,7 +7,7 @@ def sleep():
     time.sleep(3)
 
 
-class LoginPage:
+class test_LoginPage:
     url_demo = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
 
     def __init__(self):

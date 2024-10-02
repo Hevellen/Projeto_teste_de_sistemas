@@ -6,8 +6,12 @@ class Test4:
     def test_create_user(self, test_open_browser):
         loginp=test_open_browser()
         loginp.test_login_button()
-        menu_pim=menupim()
+        menu_pim=menupim(driver=loginp.driver)
         menu_pim.test_is_url_menupim(),"URL inválida!"
+        menu_pim=menupim(driver=loginp.driver)
+        menu_pim.test_pim_button()
+
+
 
 
 

@@ -1,15 +1,14 @@
 import pytest
-import time
-from selenium.webdriver.common.by import By
 
-from pages.loginPage import LoginPage
+from pages.loginPage import LoginPage, test_LoginPage
+
 
 @pytest.fixture
 def test_open_browser():
-       loginp=LoginPage()
-       loginp.open_login_page()
+       loginp=test_LoginPage
+       loginp.test_open_login_page()
        yield loginp
-       loginp.close()
+       loginp.test_close()
 
 
 
