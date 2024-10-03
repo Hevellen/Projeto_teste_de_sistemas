@@ -11,7 +11,7 @@ class test_LoginPage:
     url_demo = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
 
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
 
     def test_open_login_page(self):
         self.driver.get(self.url_demo)
