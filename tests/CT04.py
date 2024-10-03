@@ -1,6 +1,6 @@
 from pages.menuPIM import test_menupim
 #CT04-criar conta no menu PIM
-url_demo = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
+url_demo = 'https://opensource-demo.orangehrmlive.com/auth/login'
 
 class Test4:
     def test_create_user(self,test_open_browser):
