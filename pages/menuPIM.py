@@ -2,10 +2,10 @@ import driver
 from selenium.webdriver.common.by import By
 
 class test_menupim:
-    url='https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index'
+    url='https://opensource-demo.orangehrmlive.com/dashboard/index'
 
     def __init__(self, driver):
-        self.driver = driver
+        self.driver=driver
 
     def test_is_url_menupim(self):
         return driver.current_url==self.url
