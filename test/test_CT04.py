@@ -3,7 +3,7 @@ from pages.menuPIM import test_menupim
 url_demo = 'https://opensource-demo.orangehrmlive.com/auth/login'
 
 class Test4:
-    def test_create_user(self,openbrowser):
+    def test_create_user(self, openbrowser):
         assert openbrowser == True
         loginp=openbrowser()
         loginp.test_login_button()
