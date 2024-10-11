@@ -3,7 +3,7 @@ import pytest
 from pages.loginPage import test_LoginPage
 
 @pytest.fixture
-def openbrowser():
+def test_open_browser():
        loginp=test_LoginPage()
        loginp.test_open_login_page()
        yield loginp
