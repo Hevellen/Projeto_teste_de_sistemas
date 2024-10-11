@@ -4,10 +4,10 @@ from pages.loginPage import test_LoginPage
 
 @pytest.fixture
 def test_open_browser():
-       loginp=test_LoginPage()
-       loginp.test_open_login_page()
-       yield loginp
-       loginp.test_close()
+       login_p=test_LoginPage()
+       login_p.test_open_login_page()
+       yield login_p
+       login_p.test_close()
 
 
 

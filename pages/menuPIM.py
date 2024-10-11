@@ -8,7 +8,7 @@ class test_menupim:
         self.driver=driver
 
     def test_is_url_menupim(self):
-        return driver.current_url==self.url
+        return self.driver.current_url==self.url
 
     def test_pim_button(self):
         self.driver.findelement((By.CLASS_NAME, 'class="oxd-icon bi-list oxd-topbar-header-hamburger"')).click()
