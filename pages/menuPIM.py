@@ -1,7 +1,4 @@
-import time
-from os import times
 
-import driver
 from selenium.webdriver.common.by import By
 class test_menupim:
 
