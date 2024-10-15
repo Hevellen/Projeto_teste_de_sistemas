@@ -39,9 +39,8 @@ class test_menupim:
         time.sleep(5)
         assert self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div').text == '(1) Record Found', 'Titulo invalido'
 
-    #assert self.driver.find_element(By.CSS_SELECTOR, 'class="header"').text == 'Janicleide', 'Nome invalido'
-        #assert self.driver.find_element(By.CSS_SELECTOR, '[class="data"]').text == 'Maria', 'Nome invalido'
+    def test_reset_busca(self):
+        self.driver.find_element(By.CSS_SELECTOR, '[type="reset"]').click()
+        assert self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div').text != '(1) Record Found', 'Titulo invalido'
 
-    def test_editar_user(self):
-        assert self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div').text == '(1) Record Found', 'Titulo invalido'
-
+        time.sleep(3)
