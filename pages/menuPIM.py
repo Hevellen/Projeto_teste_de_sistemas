@@ -41,7 +41,9 @@ class test_menupim:
         assert self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div').text == '(1) Record Found', 'Titulo invalido'
 
     def test_reset_busca(self):
-        exibe_filtro = WebDriverWait(self.driver, 5).until(
-            EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'oxd-select-text')]"))
-        )
+        self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.oxd-table-filter > div.oxd-table-filter-area > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--ghost').click()
         time.sleep(3)
+        assert self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div').text != '(1) Record Found', 'Titulo invalido'
+
+
+

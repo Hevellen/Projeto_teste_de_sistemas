@@ -23,13 +23,9 @@ class test_menu_buzz:
         self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(12) > a').click()
         time.sleep(3)
 
-    def test_digitar(self):
-        exibe_campo_texto = WebDriverWait(self.driver, 5).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, "//div[text()='What's on your mind?']"))
-        )
-
-        exibe_campo_texto.click()
-        self.driver.find_element(By.CSS_SELECTOR,"//div[text()='What's on your mind?']").send_keys('ooooooooi')
+    def test_validar_like(self):
+        self.driver.find_element(By.CSS_SELECTOR, '#heart').click()
+        time.sleep(3)
 
 
 
