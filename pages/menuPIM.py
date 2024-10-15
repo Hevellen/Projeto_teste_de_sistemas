@@ -3,8 +3,9 @@ import time
 from selenium.webdriver.common.by import By
 class test_menupim:
 
-    url='https://opensource-demo.orangehrmlive.com/dashboard/index'
-    url_pim='https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList'
+    url = 'https://opensource-demo.orangehrmlive.com/dashboard/index'
+    url_pim = 'https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList'
+
     def __init__(self, driver):
         self.driver=driver
 
@@ -28,7 +29,6 @@ class test_menupim:
         time.sleep(5)
         self.driver.find_element(By.CSS_SELECTOR, '[type = "submit"]').click()
         time.sleep(5)
-
 
     def test_busca_cadastro(self):
         self.driver.find_element(By.CSS_SELECTOR,'#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > aside > nav > div.oxd-sidepanel-body > ul > li:nth-child(2) > a > span').click()
