@@ -9,5 +9,6 @@ class Test_05:
 
         menu_pim = test_menupim(driver=login_p.driver)
         menu_pim.test_busca_cadastro()
+        assert menu_pim.test_is_url_pim(), 'URL inválida'
         menu_pim.test_reset_busca()
 
