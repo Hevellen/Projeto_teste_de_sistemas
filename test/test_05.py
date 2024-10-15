@@ -1,5 +1,5 @@
 from pages.menuPIM import test_menupim
-#CT-005 - Validar o reset na lista após buscar usuário - Jonatas
+#CT-005 - Validar o botão reset após busca de usuário na lista- Jonatas
 
 class Test_05:
     def test_create_user(self,test_open_browser):
