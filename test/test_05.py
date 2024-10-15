@@ -9,4 +9,4 @@ class Test_05:
 
         menu_pim = test_menupim(driver=login_p.driver)
         menu_pim.test_busca_cadastro()
-        menu_pim.test_editar_user()
+
