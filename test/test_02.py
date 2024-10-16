@@ -1,4 +1,3 @@
-import time
 from pages.menuAdmin import test_menu_admin
 
 class Test_02:
@@ -12,5 +11,6 @@ class Test_02:
         menu_admin = test_menu_admin(driver=login_p.driver)
         menu_admin.test_click_admin()
         assert menu_admin.test_is_url_admin(), 'URL inválida'
+        menu_admin.test_adiciona_user()
         menu_admin.test_editar_user()
         assert menu_admin.test_valida_sucesso(), 'Erro ao salvar nome'
