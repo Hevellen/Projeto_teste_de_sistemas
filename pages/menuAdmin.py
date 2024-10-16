@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
 
 
 class test_menu_admin:
@@ -46,3 +47,27 @@ class test_menu_admin:
 
         for itens in coluna_user_role:
             assert itens.text == "Admin", f'Valor encontrado: {itens.text}, esperado: Admin'
+
+    def test_editar_user(self):
+        self.driver.find_element(By.CSS_SELECTOR, 'i.oxd-icon.bi-pencil-fill').click()
+
+        WebDriverWait(self.driver, 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, 'input.oxd-input.oxd-input--active[autocomplete="off"]')))
+        campo_username = self.driver.find_element(By.CSS_SELECTOR, 'input.oxd-input.oxd-input--active[autocomplete="off"]')
+        campo_username.click()
+        # campo_username.clear()
+        campo_username.send_keys(Keys.COMMAND + "a")
+        campo_username.send_keys(Keys.BACKSPACE)
+        campo_username.send_keys('Abel da Silva')
+
+        self.driver.find_element(By.XPATH, '//button[text()=" Save "]').click()
+
+    def test_valida_sucesso(self):
+        try:
+            success_message = WebDriverWait(self.driver, 10).until(
+                EC.visibility_of_element_located((By.XPATH, "//p[text()='Successfully Updated']"))
+            )
+            return success_message.is_displayed()
+        except:
+            return False
+

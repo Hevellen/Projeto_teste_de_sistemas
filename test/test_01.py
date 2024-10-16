@@ -1,7 +1,9 @@
 from pages.menuAdmin import test_menu_admin
 
 class Test_01:
-    def test_create_user(self, test_open_browser):
+
+    def test_filtrar_admin(self, test_open_browser):
+
         login_p = test_open_browser
         login_p.test_login_button()
         assert login_p.test_is_url_login(), 'URL válida'
