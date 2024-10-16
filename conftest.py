@@ -8,26 +8,3 @@ def test_open_browser():
        login_p.test_open_login_page()
        yield login_p
        login_p.test_close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
